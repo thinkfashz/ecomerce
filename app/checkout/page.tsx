@@ -30,7 +30,12 @@ export default async function CheckoutPage() {
             <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Pago</p>
             <h1 className="mt-2 font-display text-6xl">Enviar este pedido.</h1>
           </div>
-          <CheckoutForm addresses={addresses} />
+          <CheckoutForm
+            addresses={addresses}
+            userEmail={viewer.email ?? ''}
+            totalCents={totals.total}
+            cartItems={cart.items}
+          />
         </section>
 
         <aside className="glass-panel h-fit space-y-5 p-6">
