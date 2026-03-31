@@ -8,7 +8,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'txvtce5i.us-west.insforge.app',
+        hostname: 'v53y6dv6.us-east.insforge.app',
       },
       {
         protocol: 'https',
