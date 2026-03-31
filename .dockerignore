@@ -1,0 +1,16 @@
+.git
+.next
+node_modules
+.env*
+.DS_Store
+*.log
+npm-debug.log*
+.insforge
+skills
+skills-lock.json
+AGENTS.md
+opencode.json
+README.md
+Dockerfile
+.dockerignore
+docker-compose.yml
