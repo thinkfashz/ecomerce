@@ -30,8 +30,8 @@ export default async function OrdersPage({
       <main className="page-shell space-y-8 py-10">
         <AccountHeader
           activeTab="orders"
-          description="Review each purchase, track status changes, and open the full order summary with line items and shipping details."
-          title="Order history."
+          description="Revisa cada compra, rastrea cambios de estado y abre el resumen completo del pedido con artículos y detalles de envío."
+          title="Historial de pedidos."
         />
 
         <section className="grid gap-4">
@@ -46,7 +46,7 @@ export default async function OrdersPage({
                   <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">{order.order_number}</p>
                   <h2 className="mt-3 font-display text-3xl sm:text-4xl">{order.shipping_name}</h2>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Placed {formatShortDate(order.created_at)}
+                    Realizado el {formatShortDate(order.created_at)}
                   </p>
                 </div>
 
@@ -63,10 +63,10 @@ export default async function OrdersPage({
           ) : (
             <EmptyState
               actionHref="/products"
-              actionLabel="Explore products"
-              description="Placed orders will show up here with fulfillment progress, totals, and delivery details."
-              eyebrow="Orders"
-              title="Your order history is empty."
+              actionLabel="Explorar productos"
+              description="Los pedidos realizados aparecerán aquí con el progreso de entrega, totales y detalles de envío."
+              eyebrow="Pedidos"
+              title="Tu historial de pedidos está vacío."
             />
           )}
         </section>

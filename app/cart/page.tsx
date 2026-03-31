@@ -20,11 +20,11 @@ export default async function CartPage() {
         <main className="page-shell py-16">
           <EmptyState
             actionHref="/auth/sign-in"
-            actionLabel="Go to sign in"
+            actionLabel="Ir a iniciar sesión"
             className="mx-auto max-w-xl"
-            description="Cart records are stored per user on InsForge, so authentication is required before we create one."
-            eyebrow="Cart"
-            title="Sign in to start your cart."
+            description="El carrito se guarda por usuario, por lo que necesitas iniciar sesión antes de crear uno."
+            eyebrow="Carrito"
+            title="Inicia sesión para ver tu carrito."
           />
         </main>
       </div>
@@ -44,8 +44,8 @@ export default async function CartPage() {
       <main className="page-shell grid gap-8 py-10 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="space-y-5">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Cart</p>
-            <h1 className="mt-2 font-display text-6xl">Your current edit.</h1>
+            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Carrito</p>
+            <h1 className="mt-2 font-display text-6xl">Tu selección actual.</h1>
           </div>
 
           {cart?.items.length ? (
@@ -53,18 +53,18 @@ export default async function CartPage() {
           ) : (
             <EmptyState
               actionHref="/products"
-              actionLabel="Browse products"
-              description="Start with a product detail page, choose a configuration, and add it here to continue to checkout."
-              eyebrow="Cart"
-              title="Your cart is still empty."
+              actionLabel="Ver productos"
+              description="Comienza en la página de un producto, elige una configuración y agrégalo aquí para continuar al pago."
+              eyebrow="Carrito"
+              title="Tu carrito está vacío."
             />
           )}
         </section>
 
         <aside className="glass-panel h-fit space-y-5 p-6">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Summary</p>
-            <h2 className="mt-2 font-display text-4xl">Order total</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">Resumen</p>
+            <h2 className="mt-2 font-display text-4xl">Total del pedido</h2>
           </div>
 
           <div className="space-y-3 text-sm">
@@ -73,11 +73,11 @@ export default async function CartPage() {
               <span>{formatCurrency(totals.subtotal)}</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-muted-foreground">Shipping</span>
+              <span className="text-muted-foreground">Envío</span>
               <span>{formatCurrency(totals.shipping)}</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-muted-foreground">Tax</span>
+              <span className="text-muted-foreground">Impuesto</span>
               <span>{formatCurrency(totals.tax)}</span>
             </div>
             <div className="flex items-center justify-between border-t border-border pt-3 font-medium">
@@ -95,7 +95,7 @@ export default async function CartPage() {
             }`}
             href="/checkout"
           >
-            Continue to checkout
+            Continuar al pago
           </Link>
         </aside>
       </main>

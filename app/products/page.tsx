@@ -34,16 +34,16 @@ export default async function ProductsPage({
       <SiteHeader />
 
       <main className="page-shell space-y-10 py-12">
-        {/* Header */}
+        {/* Encabezado */}
         <section className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">
-              Catalog
+              Catálogo
             </p>
             <h1 className="mt-2 font-display text-6xl text-balance">
-              Everything in the{' '}
+              Todo en la{' '}
               <span className="relative inline-block">
-                collection.
+                colección.
                 <span
                   className="absolute -bottom-1 left-0 h-[5px] w-full rounded-full"
                   style={{ backgroundColor: '#f5c200' }}
@@ -54,7 +54,7 @@ export default async function ProductsPage({
           <ProductsSearch />
         </section>
 
-        {/* Category filters */}
+        {/* Filtros de categoría */}
         <div className="flex flex-wrap gap-2.5">
           <Link
             className={`rounded-full border px-5 py-2 text-sm font-medium transition-all duration-200 ${
@@ -64,7 +64,7 @@ export default async function ProductsPage({
             }`}
             href={buildCatalogHref()}
           >
-            All
+            Todos
           </Link>
           {categories.map((category) => (
             <Link
@@ -81,7 +81,7 @@ export default async function ProductsPage({
           ))}
         </div>
 
-        {/* Product grid */}
+        {/* Grilla de productos */}
         {products.length ? (
           <AnimatedGrid className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {products.map((product, index) => (
@@ -96,10 +96,10 @@ export default async function ProductsPage({
         ) : (
           <EmptyState
             actionHref="/products"
-            actionLabel="Reset catalog"
-            description="No products matched that category and search combination. Try a broader term or clear the current filter."
-            eyebrow="No matches"
-            title="Nothing surfaced yet."
+            actionLabel="Restablecer catálogo"
+            description="Ningún producto coincide con esa categoría y búsqueda. Intenta un término más amplio o limpia el filtro actual."
+            eyebrow="Sin resultados"
+            title="Nada encontrado aún."
           />
         )}
       </main>

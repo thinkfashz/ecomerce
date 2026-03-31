@@ -85,7 +85,7 @@ export function ProductCard({
             ) : null}
           </div>
           <span className={`text-xs ${dark ? 'text-white/30' : 'text-muted-foreground'}`}>
-            {product.inventory_count > 0 ? `${product.inventory_count} left` : 'Sold out'}
+            {product.inventory_count > 0 ? `${product.inventory_count} disponibles` : 'Agotado'}
           </span>
         </div>
       </div>

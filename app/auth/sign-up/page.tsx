@@ -10,9 +10,9 @@ export default async function SignUpPage() {
 
   return (
     <AuthShell
-      eyebrow="Create account"
-      title="Start shopping"
-      description="Email/password, verification codes, and OAuth all map directly into the InsForge-backed customer profile."
+      eyebrow="Crear cuenta"
+      title="Empieza a comprar"
+      description="Correo, contraseña, códigos de verificación y OAuth conectados directamente a tu perfil de cliente."
     >
       <SignUpForm
         providers={config.oAuthProviders ?? []}
@@ -20,9 +20,9 @@ export default async function SignUpPage() {
       />
 
       <p className="text-center text-sm text-muted-foreground">
-        Already have an account?{' '}
+        ¿Ya tienes una cuenta?{' '}
         <Link href="/auth/sign-in" className="text-foreground underline-offset-4 hover:underline">
-          Sign in
+          Inicia sesión
         </Link>
       </p>
     </AuthShell>

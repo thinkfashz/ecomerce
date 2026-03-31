@@ -43,10 +43,10 @@ export function ProductsSearch() {
     <label className="relative block w-full max-w-xl">
       <Search className="pointer-events-none absolute left-5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
       <input
-        aria-label="Search products"
+        aria-label="Buscar productos"
         className="h-12 w-full rounded-full border border-input bg-white/70 pl-12 pr-5 text-sm shadow-sm outline-none transition focus:border-foreground/20"
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="Search furniture, tableware, and bedroom pieces"
+        placeholder="Buscar muebles, vajilla y artículos para el hogar"
         type="search"
         value={query}
       />

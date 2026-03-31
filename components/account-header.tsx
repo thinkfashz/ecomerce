@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 const accountTabs = [
-  { href: '/account/orders', label: 'Orders', key: 'orders' },
-  { href: '/account/profile', label: 'Profile', key: 'profile' },
+  { href: '/account/orders', label: 'Pedidos', key: 'orders' },
+  { href: '/account/profile', label: 'Perfil', key: 'profile' },
 ] as const;
 
 export function AccountHeader({

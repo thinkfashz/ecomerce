@@ -10,16 +10,16 @@ export default async function SignInPage() {
 
   return (
     <AuthShell
-      eyebrow="Sign in"
-      title="Welcome back"
-      description="Your cart, addresses, and orders will be waiting for you."
+      eyebrow="Iniciar sesión"
+      title="Bienvenido de vuelta"
+      description="Tu carrito, direcciones y pedidos te estarán esperando."
     >
       <SignInForm providers={config.oAuthProviders ?? []} />
 
       <p className="text-center text-sm text-muted-foreground">
-        Don&apos;t have an account?{' '}
+        ¿No tienes una cuenta?{' '}
         <Link href="/auth/sign-up" className="text-foreground underline-offset-4 hover:underline">
-          Create one
+          Créala aquí
         </Link>
       </p>
     </AuthShell>

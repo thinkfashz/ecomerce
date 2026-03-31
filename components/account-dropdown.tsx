@@ -91,7 +91,7 @@ export function AccountDropdown({
               role="menuitem"
             >
               <Package2 className="size-4 text-muted-foreground" />
-              Orders
+              Pedidos
             </Link>
             <Link
               className="flex items-center gap-3 rounded-[18px] px-3 py-3 text-sm text-foreground hover:bg-muted/70"
@@ -100,7 +100,7 @@ export function AccountDropdown({
               role="menuitem"
             >
               <UserRound className="size-4 text-muted-foreground" />
-              Profile
+              Perfil
             </Link>
           </div>
 
@@ -113,7 +113,7 @@ export function AccountDropdown({
                 type="submit"
               >
                 <LogOut className="size-4 text-muted-foreground" />
-                Sign out
+                Cerrar sesión
               </button>
             </form>
           </div>

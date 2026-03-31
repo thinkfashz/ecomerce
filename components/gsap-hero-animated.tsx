@@ -55,26 +55,26 @@ export function GsapHeroAnimated() {
       ref={containerRef}
       className="page-shell grid gap-8 py-16 lg:grid-cols-[1fr_1fr] lg:py-24 lg:gap-16 items-center"
     >
-      {/* Left: text */}
+      {/* Izquierda: texto */}
       <div className="flex flex-col gap-8">
         <div className="space-y-5">
           <p className="hero-eyebrow inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">
             <span className="h-px w-8 bg-accent" />
-            Everyday pieces
+            Piezas para cada día
           </p>
           <h1 className="hero-title max-w-xl font-display text-6xl leading-none text-balance sm:text-7xl lg:text-[5.5rem] overflow-hidden">
-            Modern essentials for a{' '}
+            Esenciales modernos para un hogar más{' '}
             <span className="relative">
-              quieter
+              tranquilo
               <span
                 className="absolute bottom-2 left-0 h-[6px] w-full rounded-full"
                 style={{ backgroundColor: '#f5c200' }}
               />
-            </span>{' '}
-            home.
+            </span>
+            .
           </h1>
           <p className="hero-desc max-w-md text-base text-muted-foreground sm:text-lg leading-relaxed">
-            Thoughtful furniture, lighting, and tableware designed to settle naturally into daily life.
+            Muebles, iluminación y vajilla pensados para integrarse naturalmente en la vida cotidiana.
           </p>
         </div>
 
@@ -84,14 +84,14 @@ export function GsapHeroAnimated() {
             className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,194,0,0.4)]"
             style={{ backgroundColor: '#f5c200', color: '#0a0a0a' }}
           >
-            Shop collection
+            Ver colección
             <ArrowRight className="size-4" />
           </Link>
           <Link
             href="/products"
             className="inline-flex items-center gap-2 rounded-full border border-black/15 px-6 py-3.5 text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
           >
-            View all
+            Ver todo
           </Link>
         </div>
 
@@ -105,11 +105,11 @@ export function GsapHeroAnimated() {
               />
             ))}
           </div>
-          <span>500+ happy customers this month</span>
+          <span>+500 clientes satisfechos este mes</span>
         </div>
       </div>
 
-      {/* Right: visual panel */}
+      {/* Derecha: panel visual */}
       <div className="hero-panel relative">
         <div className="glass-panel overflow-hidden p-4">
           <div className="grid gap-3 md:grid-cols-[1.4fr_0.6fr]">
@@ -124,31 +124,31 @@ export function GsapHeroAnimated() {
             />
             <div className="flex flex-col gap-3">
               <div className="flex-1 rounded-xl bg-black p-5 text-white">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/50">New edit</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-white/50">Nueva selección</p>
                 <ul className="mt-4 space-y-2 text-xs text-white/70 leading-relaxed">
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                    Soft living room anchors
+                    Anclas de sala suaves
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                    Bedroom layers
+                    Capas para el dormitorio
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                    Dining essentials
+                    Esenciales de comedor
                   </li>
                 </ul>
               </div>
               <div className="rounded-xl p-5" style={{ backgroundColor: '#f5c200' }}>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/60">InsForge</p>
-                <p className="mt-3 font-display text-3xl text-black">Simple flow</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-black/60">LosRoquesStore</p>
+                <p className="mt-3 font-display text-3xl text-black">Flujo simple</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Floating accent dot */}
+        {/* Punto de acento flotante */}
         <div
           className="absolute -top-4 -right-4 h-16 w-16 rounded-full opacity-80 blur-sm"
           style={{ backgroundColor: '#f5c200' }}

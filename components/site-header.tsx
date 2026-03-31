@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import { ShoppingBag } from 'lucide-react';
 import { AccountDropdown } from '@/components/account-dropdown';
-import { STORE_NAME } from '@/lib/constants';
+import { LogoFlag } from '@/components/logo-flag';
 import { getCurrentAuthState } from '@/lib/auth-state';
 import { getActiveCart } from '@/lib/store';
 import { cn, getInitials, getViewerLabel } from '@/lib/utils';
 
 const navItems = [
-  { href: '/products', label: 'Shop' },
-  { href: '/products?category=living', label: 'Living' },
-  { href: '/products?category=bedroom', label: 'Bedroom' },
-  { href: '/products?category=dining', label: 'Dining' },
+  { href: '/products', label: 'Tienda' },
+  { href: '/products?category=living', label: 'Sala' },
+  { href: '/products?category=bedroom', label: 'Dormitorio' },
+  { href: '/products?category=dining', label: 'Comedor' },
 ];
 
 export async function SiteHeader({ compact = false }: { compact?: boolean }) {
@@ -34,14 +34,11 @@ export async function SiteHeader({ compact = false }: { compact?: boolean }) {
       <div className="page-shell flex h-[72px] items-center justify-between gap-4">
         {/* Logo */}
         <div className="flex items-center gap-8">
-          <Link
-            href="/"
-            className="logo-text font-display text-2xl tracking-tight text-foreground transition-colors"
-          >
-            {STORE_NAME}
+          <Link href="/" className="transition-opacity hover:opacity-80">
+            <LogoFlag />
           </Link>
 
-          {/* Desktop nav */}
+          {/* Nav escritorio */}
           <nav className="hidden items-center gap-6 text-sm md:flex">
             {navItems.map((item) => (
               <Link
@@ -55,7 +52,7 @@ export async function SiteHeader({ compact = false }: { compact?: boolean }) {
           </nav>
         </div>
 
-        {/* Actions */}
+        {/* Acciones */}
         <div className="flex items-center gap-2 sm:gap-3">
           {viewer.isAuthenticated ? (
             <AccountDropdown
@@ -70,7 +67,7 @@ export async function SiteHeader({ compact = false }: { compact?: boolean }) {
               className="signin-btn inline-flex rounded-full border px-4 py-2 text-sm transition-all duration-300 hover:bg-foreground hover:text-background"
               style={{ borderColor: 'rgba(10,10,10,0.15)' }}
             >
-              Sign in
+              Iniciar sesión
             </Link>
           )}
 
@@ -80,7 +77,7 @@ export async function SiteHeader({ compact = false }: { compact?: boolean }) {
             style={{ backgroundColor: '#0a0a0a', color: '#ffffff' }}
           >
             <ShoppingBag className="size-4" />
-            Cart
+            Carrito
             {cartCount > 0 && (
               <span
                 className="rounded-full px-2 py-0.5 text-xs font-bold"

@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic';
 export default async function ProfilePage() {
   const { viewer, accessToken } = await requireAuthenticatedSession();
 
-  const label = viewer.name?.trim() || viewer.email?.trim() || 'Account';
+  const label = viewer.name?.trim() || viewer.email?.trim() || 'Cuenta';
   const initials = getInitials(label);
   const addresses = await getSavedAddresses(viewer.id, accessToken);
 
@@ -20,8 +20,8 @@ export default async function ProfilePage() {
       <main className="page-shell space-y-8 py-10">
         <AccountHeader
           activeTab="profile"
-          description="Keep your customer profile tidy and manage the saved addresses that appear during checkout."
-          title="Profile."
+          description="Mantén tu perfil de cliente actualizado y gestiona las direcciones guardadas que aparecen en el proceso de pago."
+          title="Perfil."
         />
 
         <section className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -43,21 +43,21 @@ export default async function ProfilePage() {
 
             <div className="space-y-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Name</p>
-                <p className="mt-2 text-lg text-foreground">{viewer.name || 'Not set yet'}</p>
+                <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Nombre</p>
+                <p className="mt-2 text-lg text-foreground">{viewer.name || 'No configurado'}</p>
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Email</p>
+                <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Correo</p>
                 <p className="mt-2 text-lg text-foreground break-all">{viewer.email}</p>
               </div>
             </div>
           </div>
 
           <div className="glass-panel space-y-4 p-6">
-            <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Address book</p>
-            <h2 className="font-display text-4xl">{addresses.length} saved {addresses.length === 1 ? 'address' : 'addresses'}</h2>
+            <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Libreta de direcciones</p>
+            <h2 className="font-display text-4xl">{addresses.length} {addresses.length === 1 ? 'dirección guardada' : 'direcciones guardadas'}</h2>
             <p className="text-sm text-muted-foreground">
-              Set shipping and billing defaults here so checkout starts with the right destination.
+              Establece aquí tus preferencias de envío y facturación para que el pago comience con el destino correcto.
             </p>
           </div>
         </section>
