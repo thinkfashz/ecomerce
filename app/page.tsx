@@ -11,9 +11,9 @@ export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   const [categories, featuredProducts, latestProducts] = await Promise.all([
-    getCategories(),
-    getFeaturedProducts(),
-    getProducts(),
+    getCategories().catch(() => []),
+    getFeaturedProducts().catch(() => []),
+    getProducts().catch(() => []),
   ]);
 
   return (

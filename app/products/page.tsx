@@ -16,8 +16,8 @@ export default async function ProductsPage({
 }) {
   const params = await searchParams;
   const [categories, products] = await Promise.all([
-    getCategories(),
-    getProducts({ category: params.category, search: params.search }),
+    getCategories().catch(() => []),
+    getProducts({ category: params.category, search: params.search }).catch(() => []),
   ]);
   const activeCategory = params.category ?? null;
 

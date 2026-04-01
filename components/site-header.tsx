@@ -16,7 +16,7 @@ const navItems = [
 export async function SiteHeader({ compact = false }: { compact?: boolean }) {
   const { viewer, accessToken } = await getCurrentAuthState();
   const cart = viewer.isAuthenticated && viewer.id && accessToken
-    ? await getActiveCart(viewer.id, accessToken)
+    ? await getActiveCart(viewer.id, accessToken).catch(() => null)
     : null;
   const cartCount = cart?.items.reduce((sum, item) => sum + item.quantity, 0) ?? 0;
   const viewerLabel = getViewerLabel(viewer.name, viewer.email);
