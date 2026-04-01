@@ -138,15 +138,19 @@ export async function resetPassword(newPassword: string, otp: string): Promise<A
 export async function getOAuthUrl(provider: string): Promise<{ url: string } | { error: string }> {
   const insforge = getInsforgeServerClient();
 
-  const origin = process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000'
-    : process.env.NEXT_PUBLIC_APP_URL!;
+  // En desarrollo redirigimos directo al localhost.
+  // En producción usamos la edge function "auth-relay" alojada en InsForge
+  // (dominio ya permitido por el backend) que reenvía al usuario a Vercel.
+  const insforgeBase = 'https://v53y6dv6.us-east.insforge.app';
+  const redirectTo = process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000/auth/callback'
+    : `${insforgeBase}/functions/auth-relay`;
 
   type OAuthProvider = Parameters<typeof insforge.auth.signInWithOAuth>[0]['provider'];
 
   const { data, error } = await insforge.auth.signInWithOAuth({
     provider: provider as OAuthProvider,
-    redirectTo: `${origin}/auth/callback`,
+    redirectTo,
     skipBrowserRedirect: true,
   });
 
